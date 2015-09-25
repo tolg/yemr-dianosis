@@ -1,0 +1,36 @@
+<div class="yemr-diags-ctn" ms-controller="diag">
+	<div class="yemr-diag-line" ms-repeat-d="diags" ms-data-index="$index"
+	ms-draggable="diag"
+	data-draggable-axis="y"
+	data-draggable-ghosting="true"
+	data-draggable-handle="handle"
+	data-draggable-stop="stopFn"
+	>
+		<i class="handle"></i>
+		<select class="yemr-diag-qualifier" ms-change="prefixChange($event, d, $index)">
+			<option ms-repeat-q="qualifiers" ms-attr-value="q">{{q}}</option>
+		</select>
+		<input class="yemr-diag-input" ms-widget="textbox,$,suggestOptions"
+			ms-duplex="d"
+			ms-css-width="inputWidth"
+			ms-keydown="keyHandller($event, $index)"
+			ms-blur="blurHandller($event, $index)">
+		<i class="yemr-diag-line-btn-query" ms-click="showTreewin($index)"></i><i class="yemr-diag-line-btn-add" ms-if="d" ms-click="addLine($index, d)"></i><i class="yemr-diag-line-btn-del" ms-if="!$first" ms-click="removeLine($index)"></i>
+	</div>
+	<div class="yemr-diag-sel-win" ms-widget="dialog,treewin,treewinOpts">
+		<div class="left-side">
+			<div ms-widget="tree,tree2"></div>
+		</div>
+		<div class="mid-bar">
+			<a href="javascript:" class="btn to-right">→</a>
+			<a href="javascript:" class="btn to-left">←</a>
+		</div>
+		<div class="right-side">
+
+		</div>
+		<div class="clear">
+
+		</div>
+	</div>
+	<div ms-widget="loading,wait,waitOpt"></div>
+</div>

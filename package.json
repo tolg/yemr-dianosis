@@ -1,0 +1,9 @@
+{
+	"name": "diagnosis",
+	"version": "0.0.1",
+	"dependencies": {
+		"underscore": "",
+		"express": "3.4.8",
+		"pinyin": ""
+	}
+}

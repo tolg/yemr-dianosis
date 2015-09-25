@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link type="text/css" rel="stylesheet" href="dev/styles/diagnosis@dev.css">
+		<script src="lib/jquery.js" charset="utf-8"></script>
+		<script src="lib/underscore.js" charset="utf-8"></script>
+		<style>
+			#dig{
+				width: 450px;
+				border: solid 5px #eee;
+				padding: 16px;
+			}
+		</style>
+		<title></title>
+	</head>
+	<body>
+		<div id="dig"></div>
+		<div class="">
+			<button id="save">save</button>
+		</div>
+		<div id="log" style="font-size:12px"></div>
+		<script type="text/javascript">
+		logdiv = $('#log')[0]
+		window.log = window.dlog =  function(info){
+			// logdiv.innerHTML+=(new Date() + ' -> ' + info + '<br>')
+		}
+
+
+		</script>
+		<script src="dev/scripts/diagnosis@dev.js" charset="utf-8"></script>
+		<script type="text/javascript">
+		var queryDiag = function(keyWord, onResult) {
+			log('开始模拟查找诊断')
+var i, r;
+r = keyWord ? (function() {
+	var _i, _results;
+	_results = [];
+	for (i = _i = 1; _i <= 20; i = ++_i) {
+		_results.push(keyWord + i);
+	}
+	log('模拟查找诊断结束')
+	return _results;
+})() : [];
+return typeof onResult === "function" ? onResult(r) : void 0;
+};
+
+
+			var diag = new YEMR.Diagnosis({node:$('#dig'),queryDiag:YEMR.queryDiag});
+			$('#save').click(function(){diag.save()})
+		</script>
+	</body>
+</html>

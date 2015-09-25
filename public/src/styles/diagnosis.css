@@ -1,0 +1,105 @@
+require('oniui');;
+.clear{clear: both;}
+.oni-textbox{
+  border-top: none 0;
+  border-left: none 0;
+  border-right: none 0;
+  padding-top:0;
+  padding-bottom: 0;
+  vertical-align: middle;
+  height: 18px;
+}
+.oni-suggest{
+  top: -3px;
+}
+.yemr-diags-ctn{
+  position: relative;
+}
+.yemr-diag-input{
+  border: none 0;
+  border-bottom: solid 1px #999;
+  outline: none;
+  width: 300px;
+}
+.yemr-diag-line{
+  margin: 10px 0;
+}
+.yemr-diag-line .handle{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  overflow: hidden;
+  vertical-align: middle;
+  background: url(imgs/cross_arrow.png) no-repeat;
+  background-position: 100px;
+  margin-right: 5px;
+}
+.yemr-diag-line-btn-add,
+.yemr-diag-line-btn-del,
+.yemr-diag-line-btn-query{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.yemr-diag-line-btn-add{
+  background: url(imgs/add.png) no-repeat;
+}
+.yemr-diag-line-btn-del{
+  background: url(imgs/del.png) no-repeat;
+}
+.yemr-diag-line-btn-query{
+  background: url(imgs/query.png) no-repeat;
+}
+.yemr-diag-tip-ctn{
+  position: absolute;
+  min-width: 200px;
+  max-height: 500px;
+  overflow: auto;
+  background: #fff;
+  border: solid 1px #ddd;
+}
+
+.yemr-diag-sel-win .left-side{
+  float: left;
+  width: 280px;
+  height: 300px;
+  overflow: auto;
+  border: solid 1px #ddd;
+}
+.yemr-diag-sel-win .right-side{
+  float: left;
+  width: 220px;
+  height: 300px;
+  overflow: auto;
+  border: solid 1px #ddd;
+}
+.yemr-diag-sel-win .mid-bar{
+  float: left;
+  width: 50px;
+  height: 200px;
+  padding-top: 100px;
+  *height: 300px;
+}
+
+.yemr-diag-sel-win .mid-bar a.btn{
+  display: block;
+  width: 30px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  margin: 10px;
+  background: #f50;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.yemr-diag-sel-win .mid-bar a.btn:hover{
+  text-decoration: none;
+  background: #f70;
+}
