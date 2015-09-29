@@ -7,7 +7,7 @@ http = require('http')
 path = require('path')
 app = express()
 # sqlite3 = require('sqlite3').verbose()
-excelParser = require('./src/parseExcel.coffee')
+excelParser = require('./src/parseExcel')
 staticExts = ['css','js','html','htm','png','gif','jpg','jpeg','json']
 # all environments
 app.set 'port', process.env.PORT or 3030
